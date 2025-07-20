@@ -48,7 +48,7 @@ jobs:
         steps:
 
             - name: Deploy
-              run: echo "Deploy..."
+              run: echo "Deploy...app"
               
 
         

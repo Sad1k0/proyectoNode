@@ -28,6 +28,14 @@ jobs:
         - name: Test Redis
           run: redis-cli -h localhost -p 6379 ping 
 
+        - name: Checkout
+          run: actions/checkout@v4
+
+        - name: Instalar dependencias
+          run: npm install
+
+        
+
         
 
         

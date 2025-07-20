@@ -41,7 +41,7 @@ jobs:
           run: npm run build
           
     deploy:
-        if: $(( always() }}
+        if: ${{ always() }}
         runs-on: ubuntu-latest
         needs: build
         

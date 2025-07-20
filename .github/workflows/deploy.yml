@@ -36,9 +36,12 @@ jobs:
 
         - name: testing
           run: npm run test
+
+        - name: Build page
+          run: npm run build
           
     deploy:
-        
+        if: $(( always() }}
         runs-on: ubuntu-latest
         needs: build
         

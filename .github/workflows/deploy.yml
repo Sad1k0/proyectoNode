@@ -65,7 +65,7 @@ jobs:
 
             - name: Deploy pages
               id: deployment-pages
-              uses: actions/deploy-pagses@v4
+              uses: actions/deploy-pages@v4
               
               
               

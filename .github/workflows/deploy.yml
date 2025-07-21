@@ -5,7 +5,12 @@ on: push
 jobs:
 
     build:
-      runs-on: ubuntu-latest
+      runs-on: ${{ matrix.os }}
+
+      strategy:
+          matrix:
+              os: [ ubuntu-latest, windows-latest ]
+              node: [ 18, 20 ]
 
       services:
           redis:
@@ -23,7 +28,7 @@ jobs:
         - name: setup
           uses: actions/setup-node@v4
           with:
-              node-version: '18'
+              node-version: ${{ matix.node }}
 
         - name: Install redis cli
           run: sudo apt-get update -y && sudo apt-get install redis-tools -y
@@ -41,6 +46,7 @@ jobs:
           run: npm run build
 
         - name: upload Artifact
+          if: ${{ matrix.os == 'ubuntu-latest' && matrix.node == '18' }}
           uses: actions/upload-pages-artifact@v3
           with:
               path: public/

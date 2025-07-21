@@ -55,7 +55,7 @@ jobs:
 
         environment:
             name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
+            url: ${{ steps.deployment-pages.outputs.page_url }}
 
         runs-on: ubuntu-latest
 
@@ -65,7 +65,7 @@ jobs:
               run: echo "Deploy...app"
 
             - name: Deploy
-              id: deployment
+              id: deployment-pages
               uses: actions/deploy-pages@v4
               
               

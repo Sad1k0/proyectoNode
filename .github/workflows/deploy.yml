@@ -61,10 +61,10 @@ jobs:
 
         steps:
 
-            - name: Deploy
+            - name: DeployEcho
               run: echo "Deploy...app"
 
-            - name: Deploy pages
+            - name: Deploy
               id: deployment
               uses: actions/deploy-pages@v4
               

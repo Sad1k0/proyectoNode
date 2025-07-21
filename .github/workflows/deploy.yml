@@ -28,7 +28,7 @@ jobs:
         - name: setup
           uses: actions/setup-node@v4
           with:
-              node-version: ${{ matix.node }}
+              node-version: ${{ matrix.node }}
 
         - name: Install redis cli
           run: sudo apt-get update -y && sudo apt-get install redis-tools -y

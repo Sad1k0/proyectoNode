@@ -62,7 +62,7 @@ jobs:
         steps:
 
             - name: DeployEcho
-              run: echo "Deploy...app"
+              run: echo "Deploy...appli"
 
             - name: Deploy
               id: deployment-pages
